@@ -4,7 +4,7 @@ Title: Holds MATH4753 functions
 Version: 0.1.0
 Author: Gavin Short
 Maintainer: Gavin Short <gavin.short@ou.edu>
-Description: A subset of MATH 4753 coursework and functions.
+Description: A subset of MATH 4753 coursework and functions plus other goodies.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
