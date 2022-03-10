@@ -7,7 +7,6 @@
 #' @return
 #' @export
 #'
-#' @examples
 myncurve = function(mu, sigma, a){
   curve(dnorm(x, mean = mu, sd = sigma), xlim = c(mu - 3*sigma, mu + 3*sigma), lwd = 3)
   xcurve = seq(-3*sigma, a, length=1000)
