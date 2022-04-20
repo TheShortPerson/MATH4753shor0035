@@ -1,4 +1,4 @@
-#' @title MyCIMATH
+#' @title MyCI
 #'
 #' @param x sample data
 #'

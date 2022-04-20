@@ -1,0 +1,119 @@
+---
+title: "MATH 4753 R Package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753shor0035)
+```
+
+
+# Introduction
+
+This is a package of functions for MATH 4753, spring 22 semester. It contains functions from labs 4-12.
+
+## ScatterHist
+
+This function, given two variables, will create a sophisticated plot incorporating both scatterplot and histogram characteristics. For example,
+
+```{r, eval = FALSE}
+with(ddt, scatterhist(LENGTH,WEIGHT, xlab="LENGTH"))
+```
+
+This will take the ddt data set and create a plot of LENGTH vs WEIGHT, with the x-axis label being LENGTH.
+
+## MyBin
+
+This function will take a given number of trials, probability of success, and a number of iterations, and create a barplot of the expected results. This is intended for a binomial distribution. For example,
+
+```{r, eval = FALSE}
+mybin(iter = 100, n = 10, p = .5)
+```
+
+This will create a barplot of the expected number of successes, given 100 iterations, 10 trials, and a 50% chance of success for each trial.
+
+## MyNCurve
+
+This function will plot a normal distribution graph for a given mean and standard deviation. It will also take a given value, plot the area that is less than that value, as well as calculate the area (probability). For example,
+
+```{r, eval = FALSE}
+myncurve(mu = 10, sigma = 2, a = 8)
+```
+
+This will plot a normal distribution with mean 10 and standard deviation 2, and overlay the area of the curve that is less than 8, as well as calculate its area.
+
+## MyDDT
+
+This function is from project 1 in the course. It will take the ddt data set (needs to be read in), subset the dataset for a specified species, and make various graphs, plots, and print the subsetted dataset to the console. For example,
+
+```{r, eval = FALSE}
+myddt(df = ddt, species = "CCATFISH")
+```
+
+This will take the ddt data set, and make these plots for the CCATFISH species.
+
+## MyCLT
+
+This function will return a histogram with the sample means of repeated sampling. This particular function takes a uniform distribution with specified endpoints. For example,
+
+```{r, eval = FALSE}
+mycltu(n = 10, iter = 10000, a = 0, b = 10)
+```
+
+This will take a uniform distribution with endpoints a and b, 0 and 10, for a sample size of 10, with 10000 iterations. 
+
+## MyBoot2
+
+This is a bootstrapping function to calculate confidence intervals, given a sample and a given confidence level. For example,
+
+```{r, eval = FALSE}
+sam = rnorm(mu = 10, sigma = 5)
+myboot2(iter = 10000, x = sam, fun = "mean", alpha = 0.05)
+```
+
+This will take our sample, which can come from any distribution, but the Normal is used here for simplicity. The function will take that sample, calculate the confidence interval for the mean, with an alpha of 0.05 (thus, a confidence level of 1 - 0.05 = 0.95).
+
+## MyMLNorm
+
+This is a maximum likelihood estimator function for a normal distribution. Specifically, this will plot a contour plot highlighting the most probable values for the mean and standard deviation, assuming the given distribution is normal. For example,
+
+```{r, eval = FALSE}
+mymlnorm(x=c(10,12,13,15,12,11),mu=seq(10,15,length=1000),sig=seq(0.1,4,length=1000))
+```
+
+This will plot a contour plot, given a set of data (x), and a range of plausible values for the mean and standard deviation.
+
+## MyCI
+
+This function will calculate a 95% confidence interval for a specified sample, using R as a calculator. 
+
+```{r, eval = FALSE}
+myci(x = rnorm(30, mean = 10, sd = 12))
+```
+
+
+## MyPValue
+
+This function will return a plot of the (specified) t-statistic, the rejection region, and the p-value. For example,
+
+```{r, eval = FALSE}
+tcalc = 1.5
+mypvalue(tcalc,n=30,alpha=0.05)
+```
+
+This will take a (previously calculated) t-statistic of 1.5, and plot that, the rejection region, and the calculated p-value for a sample size of 30 and alpha value of 0.05.
+
+## Fire dataset
+
+This is the FIREDAM dataset from the textbook.
