@@ -2,7 +2,7 @@
 title: "MATH 4753 R Package"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{MATH 4753 R Functions}
+  %\VignetteIndexEntry{MATH 4753 R Package}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
