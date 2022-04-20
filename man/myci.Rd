@@ -2,7 +2,7 @@
 % Please edit documentation in R/myci.R
 \name{myci}
 \alias{myci}
-\title{MyCIMATH}
+\title{MyCI}
 \usage{
 myci(x)
 }
@@ -13,7 +13,7 @@ myci(x)
 A 95% confidence interval for the mean of the population being sampled
 }
 \description{
-MyCIMATH
+MyCI
 }
 \examples{
 \dontrun{myci(x = rnorm(30, mean = 10, sd = 12))}
